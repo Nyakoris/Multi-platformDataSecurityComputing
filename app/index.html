@@ -4,75 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <title>homomorphism test</title>
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     <link rel="stylesheet" href="./src/component.css" type="text/css">
     <link rel="stylesheet" href="./src/normalize.css" type="text/css">
     <link rel="stylesheet" type="text/css" href="./src/demo.css" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body style="background: #ffffff;">
-    <div class="container">
+
+    <div class="menu-pos">
+        <h1>LOGIN</h1>
+    </div>
+
+    <div class="pull-right btn-group">
+
+            <button type="button" class="btn btn-default dropdown-toggle btn-lg" data-toggle="dropdown">
+                菜单 <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">登陆</a></li>
+                <li><a href="#">注册</a></li>
+                <li><a href="#">关于</a></li>
+            </ul>
+        </div>
+ 
+    <div class="containerr">
         <section class="content">
-            <h2 >LOGIN</h2>
             <span class="input input--ichiro">
                 <input class="input__field input__field--ichiro" type="text" id="input-25" />
                 <label class="input__label input__label--ichiro" for="input-25">
-                    <span class="input__label-content input__label-content--ichiro">Username</span>
+                    <span class="input__label-content input__label-content--ichiro">Username :</span>
                 </label>
             </span>
             <span class="input input--ichiro">
                 <input class="input__field input__field--ichiro" type="text" id="input-26" />
                 <label class="input__label input__label--ichiro" for="input-26">
-                    <span class="input__label-content input__label-content--ichiro">Password</span>
+                    <span class="input__label-content input__label-content--ichiro">Password :</span>
                 </label>
             </span>
             <span class="input input--ichiro">
                 <input class="input__field input__field--ichiro" type="text" id="input-27" />
                 <label class="input__label input__label--ichiro" for="input-27">
-                    <span class="input__label-content input__label-content--ichiro">Verfication</span>
+                    <span class="input__label-content input__label-content--ichiro">Verfication :</span>
                 </label>
             </span>
         </section>
     </div>
-    <button type="button">Login!</button>
+    <div class="container">
+        <label>
+            <input type="checkbox" value="记住我">
+            记住我
+        </label>
+    </div>
+
+    <div class="container">
+        <button class="button button-large button-primary">
+
+            LOGIN
+
+        </button>
+    </div>
     <p>
-        Node.js <span id="node-version"></span>,
+        develop environment: Node.js <span id="node-version"></span>,
         Chromium <span id="chrome-version"></span>,
-        and Electron <span id="electron-version"></span>.
+        Electron <span id="electron-version"></span>.
     </p>
     <script src="js/classie.js"></script>
     <script>
-        (function() {
+        (function () {
             // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
             if (!String.prototype.trim) {
-                (function() {
+                (function () {
                     // Make sure we trim BOM and NBSP
                     var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-                    String.prototype.trim = function() {
+                    String.prototype.trim = function () {
                         return this.replace(rtrim, '');
                     };
                 })();
             }
 
-            [].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+            [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
                 // in case the input is already filled..
-                if( inputEl.value.trim() !== '' ) {
-                    classie.add( inputEl.parentNode, 'input--filled' );
+                if (inputEl.value.trim() !== '') {
+                    classie.add(inputEl.parentNode, 'input--filled');
                 }
 
                 // events:
-                inputEl.addEventListener( 'focus', onInputFocus );
-                inputEl.addEventListener( 'blur', onInputBlur );
-            } );
+                inputEl.addEventListener('focus', onInputFocus);
+                inputEl.addEventListener('blur', onInputBlur);
+            });
 
-            function onInputFocus( ev ) {
-                classie.add( ev.target.parentNode, 'input--filled' );
+            function onInputFocus(ev) {
+                classie.add(ev.target.parentNode, 'input--filled');
             }
 
-            function onInputBlur( ev ) {
-                if( ev.target.value.trim() === '' ) {
-                    classie.remove( ev.target.parentNode, 'input--filled' );
+            function onInputBlur(ev) {
+                if (ev.target.value.trim() === '') {
+                    classie.remove(ev.target.parentNode, 'input--filled');
                 }
             }
         })();

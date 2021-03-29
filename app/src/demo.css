@@ -31,7 +31,7 @@ a:hover, a:focus {
 	color: #74777b;
 }
 
-.container {
+.containerr {
 	margin: 0 auto;
 	text-align: center;
 	overflow: hidden;
@@ -43,8 +43,8 @@ a:hover, a:focus {
 }
 
 .content h2 {
-	margin: 0 0 2em;
-	opacity: 0.1;
+	margin: 0 0 1em;
+	opacity: 1;
 }
 
 .content p {
