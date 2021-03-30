@@ -29,6 +29,16 @@
 }
 */
 
+.content {
+	font-size: 150%;
+	padding: 2em 0 1em 0;
+}
+
+.header h3 {
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: 40px;
+  }
 .menu-pos{
 	margin: 0 auto;
 	text-align: center;
@@ -94,51 +104,9 @@
 	fill: none;
 }
 
-.icon {
-	color: #ddd;
-	font-size: 150%;
-}
-
-/* Individual styles */
 
 
 
-
-@-webkit-keyframes anim-2 {
-	50% {
-		opacity: 0;
-		-webkit-transform: scale3d(0.3, 0.3, 1);
-		transform: scale3d(0.3, 0.3, 1);
-	}
-	51% {
-		opacity: 0;
-		-webkit-transform: translate3d(0, 3.7em, 0) scale3d(0.3, 0.3, 1);
-		transform: translate3d(0, 3.7em, 0) scale3d(0.3, 0.3, 1);
-	}
-	100% {
-		opacity: 1;
-		-webkit-transform: translate3d(0, 3.7em, 0);
-		transform: translate3d(0, 3.7em, 0);
-	}
-}
-
-@keyframes anim-2 {
-	50% {
-		opacity: 0;
-		-webkit-transform: scale3d(0.3, 0.3, 1);
-		transform: scale3d(0.3, 0.3, 1);
-	}
-	51% {
-		opacity: 0;
-		-webkit-transform: translate3d(0, 3.7em, 0) scale3d(0.3, 0.3, 1);
-		transform: translate3d(0, 3.7em, 0) scale3d(0.3, 0.3, 1);
-	}
-	100% {
-		opacity: 1;
-		-webkit-transform: translate3d(0, 3.7em, 0);
-		transform: translate3d(0, 3.7em, 0);
-	}
-}
 
 /* Ichiro */
 .input--ichiro {

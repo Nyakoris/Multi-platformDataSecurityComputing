@@ -2,115 +2,119 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>homomorphism test</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>homomorphism</title>
 
     <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <link rel="stylesheet" href="./src/component.css" type="text/css">
-    <link rel="stylesheet" href="./src/normalize.css" type="text/css">
-    <link rel="stylesheet" type="text/css" href="./src/demo.css" />
-
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./src/button.css" type="text/css">
 </head>
 
 <body style="background: #ffffff;">
-
-    <div class="menu-pos">
-        <h1>LOGIN</h1>
-    </div>
-
-    <div class="pull-right btn-group">
-
-            <button type="button" class="btn btn-default dropdown-toggle btn-lg" data-toggle="dropdown">
-                菜单 <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="#">登陆</a></li>
-                <li><a href="#">注册</a></li>
-                <li><a href="#">关于</a></li>
-            </ul>
+    <div class="container" style="padding-top:20px ;">
+        <div class="header clearfix">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                    <li role="presentation"><a href="#">About</a></li>
+                    <li role="presentation"><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <h3 class="text-muted">Multi-platDataSecurComp</h3>
         </div>
- 
-    <div class="containerr">
-        <section class="content">
-            <span class="input input--ichiro">
-                <input class="input__field input__field--ichiro" type="text" id="input-25" />
-                <label class="input__label input__label--ichiro" for="input-25">
-                    <span class="input__label-content input__label-content--ichiro">Username :</span>
-                </label>
-            </span>
-            <span class="input input--ichiro">
-                <input class="input__field input__field--ichiro" type="text" id="input-26" />
-                <label class="input__label input__label--ichiro" for="input-26">
-                    <span class="input__label-content input__label-content--ichiro">Password :</span>
-                </label>
-            </span>
-            <span class="input input--ichiro">
-                <input class="input__field input__field--ichiro" type="text" id="input-27" />
-                <label class="input__label input__label--ichiro" for="input-27">
-                    <span class="input__label-content input__label-content--ichiro">Verfication :</span>
-                </label>
-            </span>
-        </section>
-    </div>
-    <div class="container">
-        <label>
-            <input type="checkbox" value="记住我">
-            记住我
-        </label>
-    </div>
 
-    <div class="container">
-        <button class="button button-large button-primary">
 
-            LOGIN
+        <div class="container" style="margin:0 auto;text-align: center;">
+            <section class="content">
+                <span class="input input--ichiro">
+                    <input class="input__field input__field--ichiro" type="text" id="input-25" />
+                    <label class="input__label input__label--ichiro" for="input-25">
+                        <span class="input__label-content input__label-content--ichiro">Username :</span>
+                    </label>
+                </span>
+                <span class="input input--ichiro">
+                    <input class="input__field input__field--ichiro" type="text" id="input-26" />
+                    <label class="input__label input__label--ichiro" for="input-26">
+                        <span class="input__label-content input__label-content--ichiro">Password :</span>
+                    </label>
+                </span>
+                <span class="input input--ichiro">
+                    <input class="input__field input__field--ichiro" type="text" id="input-27" />
+                    <label class="input__label input__label--ichiro" for="input-27">
+                        <span class="input__label-content input__label-content--ichiro">Verification :</span>
+                    </label>
+                </span>
+            </section>
+        </div>
+        <div class="center-block" style="max-width: 400px;">
 
-        </button>
-    </div>
-    <p>
-        develop environment: Node.js <span id="node-version"></span>,
-        Chromium <span id="chrome-version"></span>,
-        Electron <span id="electron-version"></span>.
-    </p>
-    <script src="js/classie.js"></script>
-    <script>
-        (function () {
-            // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
-            if (!String.prototype.trim) {
-                (function () {
-                    // Make sure we trim BOM and NBSP
-                    var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
-                    String.prototype.trim = function () {
-                        return this.replace(rtrim, '');
-                    };
-                })();
-            }
+            <label>
+                <input type="checkbox" value="记住我">
+                记住我
+            </label>
 
-            [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
-                // in case the input is already filled..
-                if (inputEl.value.trim() !== '') {
-                    classie.add(inputEl.parentNode, 'input--filled');
+            <div style="float:right;padding-right:5px">
+                <a href="#"> 忘记密码
+                </a>
+            </div>
+        </div>
+
+
+        <div class="center-block container" style="max-width: 200px;">
+            <button class=" button button-large button-primary">
+                LOGIN
+            </button>
+        </div>
+        <div class="content" style="font-size: 100%;">
+            <p>
+                env: Node.js <span id="node-version"></span>,
+                Chromium <span id="chrome-version"></span>,
+                Electron <span id="electron-version"></span>.
+            </p>
+        </div>
+        <script src="js/classie.js"></script>
+        <script>
+            (function () {
+                // trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+                if (!String.prototype.trim) {
+                    (function () {
+                        // Make sure we trim BOM and NBSP
+                        var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+                        String.prototype.trim = function () {
+                            return this.replace(rtrim, '');
+                        };
+                    })();
                 }
 
-                // events:
-                inputEl.addEventListener('focus', onInputFocus);
-                inputEl.addEventListener('blur', onInputBlur);
-            });
+                [].slice.call(document.querySelectorAll('input.input__field')).forEach(function (inputEl) {
+                    // in case the input is already filled..
+                    if (inputEl.value.trim() !== '') {
+                        classie.add(inputEl.parentNode, 'input--filled');
+                    }
 
-            function onInputFocus(ev) {
-                classie.add(ev.target.parentNode, 'input--filled');
-            }
+                    // events:
+                    inputEl.addEventListener('focus', onInputFocus);
+                    inputEl.addEventListener('blur', onInputBlur);
+                });
 
-            function onInputBlur(ev) {
-                if (ev.target.value.trim() === '') {
-                    classie.remove(ev.target.parentNode, 'input--filled');
+                function onInputFocus(ev) {
+                    classie.add(ev.target.parentNode, 'input--filled');
                 }
-            }
-        })();
-    </script>
+
+                function onInputBlur(ev) {
+                    if (ev.target.value.trim() === '') {
+                        classie.remove(ev.target.parentNode, 'input--filled');
+                    }
+                }
+            })();
+        </script>
+    </div>
 </body>
 
 </html>
